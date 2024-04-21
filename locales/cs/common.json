@@ -1,0 +1,30 @@
+{
+  "addCar": "Vložit",
+  "removeCar": "Smazat",
+  "carForm": {
+    "carBrand": "Značka",
+    "carModel": "Model",
+    "carYearOfManufacture": "Rok výroby",
+    "carImage": "Obrázek"
+  },
+  "autoComplete": {
+    "open": "Otevřít",
+    "clear": "Smazat",
+    "close": "Zavřít",
+    "loading": "Načítání",
+    "noOptions": "Žádné volby"
+  },
+  "carImage": "Obrázek",
+  "embeddedImage": "Vložený obrázek",
+  "uploadText": "Nahrajte nebo přeneste soubor přímo sem",
+  "deleteImage": "Smazat obrázek",
+  "fileSizeLimit": "Velikost obrázku je omezena na 2 mb.",
+  "fileExtensionsLimit": "Podporované soubory - 'JPG', 'JPEG', 'PNG', 'WEBP'.",
+  "carsList": "Seznam vozidel",
+  "carsNotFound": "Vozidla nenalezena. Nejprve přidejte vozidla.",
+  "carDetail": "Detail vozidla",
+  "pleaseSelectCar": "Vyberte si prosím vozidlo",
+  "carNotFound": "Vozidlo nebylo nalezeno.",
+  "selectFile": "Přetáhněte sem soubor nebo ho vyberte kliknutím",
+  "errorWhileUploadFile": "Soubor je v nesprávném formátu nebo překračuje datovou velikost."
+}
