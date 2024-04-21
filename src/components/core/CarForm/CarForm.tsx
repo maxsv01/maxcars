@@ -54,7 +54,9 @@ const CarForm = () => {
       <Controller
         name="imageFile"
         control={control}
-        render={({ field: { onChange, value } }) => <ImageUploader onFileUpload={onChange} value={value} />}
+        render={({ field: { onChange }, formState }) => (
+          <ImageUploader onFileUpload={onChange} isFormSubmitted={formState.isSubmitted} />
+        )}
       />
 
       <PrimaryButton color="primary" label={t('addCar')} type="submit" />

@@ -9,10 +9,10 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 interface ImageUploaderProps {
   onFileUpload: (file: File | null) => void;
-  value: File | null;
+  isFormSubmitted: boolean;
 }
 
-const ImageUploader = ({ onFileUpload, value }: ImageUploaderProps) => {
+const ImageUploader = ({ onFileUpload, isFormSubmitted }: ImageUploaderProps) => {
   const { t } = useTranslation('common');
 
   const [imageUrl, setImageUrl] = useState<string>('');
@@ -28,14 +28,16 @@ const ImageUploader = ({ onFileUpload, value }: ImageUploaderProps) => {
   });
 
   useEffect(() => {
-    if (!value) {
+    if (isFormSubmitted) {
       setImageUrl('');
       // The library does not have a method for deleting files, more - https://github.com/react-dropzone/react-dropzone/issues/805#issuecomment-1025083423
       acceptedFiles.length = 0;
       acceptedFiles.splice(0, acceptedFiles.length);
+      fileRejections.length = 0;
+      fileRejections.splice(0, fileRejections.length);
       if (inputRef.current) inputRef.current.value = '';
     }
-  }, [value]);
+  }, [isFormSubmitted]);
 
   useEffect(() => {
     if (acceptedFiles.length > 0) {
