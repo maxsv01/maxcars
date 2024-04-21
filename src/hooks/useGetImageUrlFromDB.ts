@@ -25,6 +25,8 @@ const useGetImageUrlFromDB = ({ imageId }: useGetImageUrlFromDBProps) => {
         } catch (err) {
           console.warn('Error when uploading an image.');
         }
+      } else {
+        setImageUrl('');
       }
     };
     fetchImage();
